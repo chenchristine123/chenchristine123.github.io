@@ -74,22 +74,22 @@ h1 {
 
 h2 {
     font-size: 28px;
-    font-weight: medium;
+    font-weight: 500;
 }
 
 h4 {
     font-size: 40px;
-    font-weight: medium;
+    font-weight: 500;
 }
 
 h5 {
     font-size: 14px;
-    font-weight: medium;  
+    font-weight: 500;  
 }
 
 p {
     font-size: 14px;
-    font-weight: regular; 
+    font-weight: 400; 
 }
 
 .topline hr{
@@ -97,7 +97,7 @@ p {
     margin-right: 100px;
     border-style: solid;
     border-color: #474FFF;
-    border-style: 2px;
+    height: 2px;
 }
 
 .menu {
@@ -105,7 +105,7 @@ p {
     grid-template-columns: 1fr 2fr 1fr;
     color: #474FFF;
     font-size: 28px;
-    font-weight: medium;
+    font-weight: 500;
     text-align: center;
     margin: 40px 20px 15px 20px;
 }
