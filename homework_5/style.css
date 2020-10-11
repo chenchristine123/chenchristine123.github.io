@@ -119,7 +119,17 @@ p {
     padding-left: 70px;
 }
 
-.icon {
+#iconsearch {
+    height: 30px;
+    padding: 30px 20px 15px 30px;
+}
+
+#iconaccount {
+    height: 30px;
+    padding: 30px 20px 15px 30px;
+}
+
+#iconcart {
     height: 30px;
     padding: 30px 20px 15px 30px;
 }
