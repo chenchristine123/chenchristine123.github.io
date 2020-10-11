@@ -1,0 +1,350 @@
+/* CSS RESET (custom css is below this) */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* CUSTOM CSS STARTS HERE */
+a:link {
+  text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.message {
+    background-color: #474FFF;
+    text-align: center;
+    color: white;
+    padding: 10px 50px 10px;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: medium;
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: medium;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: medium;  
+}
+
+p {
+    font-size: 14px;
+    font-weight: regular; 
+}
+
+.topline hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    border-style: solid;
+    border-color: #474FFF;
+    border-style: 2px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    color: #474FFF;
+    font-size: 28px;
+    font-weight: medium;
+    text-align: center;
+    margin: 40px 20px 15px 20px;
+}
+
+.grid-item li {
+    display: inline-block;
+    padding: 30px 10px 15px 10px;
+}
+
+#logo {
+    padding-left: 70px;
+}
+
+#icon {
+    height: 30px;
+    padding: 30px 20px 15px 30px;
+}
+
+#bannertext1 {
+    color: white;
+    position: absolute; 
+    top: 300px; 
+    left: 100px; 
+    width: 25%; 
+    line-height: 1.4em;
+}
+
+#bannertext2 {
+    color: white;
+    position: absolute; 
+    top: 420px; 
+    left: 100px; 
+    width: 25%; 
+    line-height: 1.4em;
+}
+
+#bannertext3 {
+    color: white;
+    position: absolute; 
+    top: 500px; 
+    left: 100px; 
+    width: 18%; 
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 7px 10px 7px 10px;
+}
+
+#friendtext {
+    color: #474FFF;
+    padding: 80px 100px 40px 100px;
+}
+
+#imgfriend1 {
+    margin: 0px 10px 100px 100px;
+    width:605px;
+}
+
+#imgfriend2 {
+    margin: 0px 10px 100px 10px;
+    width:605px;
+}
+
+.footer {
+    background-color: #474FFF;
+    color: white;
+    padding: 50px 100px 100px 100px;
+    display:grid;
+    grid-template-columns: 0.8fr 1fr 1fr 2fr;
+    line-height: 1.4;
+}
+
+#email {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 7px 10px 7px 10px;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 2fr 1fr;
+    padding-top: 30px;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 100px;
+    width: 640px;
+}
+
+.box2 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.box3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 180px;
+    padding: 30px 50px 0px 100px;
+}
+
+.box4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 180px;
+    padding: 30px 0px 0px 0px;
+}
+
+.box5 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 180px;
+    padding: 30px 10px 0px 0px;
+}
+
+.box6 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 560px;
+    padding: 30px 10px 0px 0px; 
+}
+
+#circles {
+    width: 200px;
+    padding-bottom: 20px;
+}
+
+#size {
+    width: 140px;
+    height: 30px;
+}
+
+#color {
+    width: 140px;
+    height: 30px;
+}
+
+#addtocart {
+    background-color: #474FFF;
+    color: white;
+    border-style: none;
+    padding: 7px 80px 7px 80px;
+    margin-top: 60px;
+}
+
+.reviews {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#reviewbutton {
+    background-color: #474FFF;
+    color: white;
+    border-style: none;
+    padding: 7px 80px 7px 80px;
+    margin-top: 30px;
+    margin-left: 40%;
+    margin-bottom: 50px;
+}
+
+.reviewbox {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.checkout {
+    margin: 80px 130px 30px 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+#checkouttext {
+    margin-left: 100px;
+}
+
+#reviewlength {
+    width: 500px;
+    line-height: 1.5em;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.headertext {
+    margin: 40px 10px 20px 10px;
+}
+
+.group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.h1center {
+    text-align: center;
+    margin: 80px 0px 40px 0px;
+}
+
+.item {
+    margin-bottom: 60px;
+}
+
+.fontblue {
+    color: #474FFF;
+}
+
+#circlesmall {
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
