@@ -393,7 +393,7 @@ p {
 }
 
 .spacebottom {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 #itemCount {
@@ -410,8 +410,31 @@ p {
     border-style: none;
     padding: 7px 80px 7px 80px;
     margin: 0px 30px 100px 1100px;
-    
 }
+
+.subBox {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.subBox1 {
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row-start:1;
+    grid-row-end: 2;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.subBox2 {
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start:1;
+    grid-row-end: 2;
+}
+
+
 
 
 
