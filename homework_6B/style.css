@@ -433,6 +433,31 @@ p {
     grid-row-end: 2;
 }
 
+.itemImage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.itemBox1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    grid-row-end: 2;
+    width: 180px;
+}
+
+.itemBox2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 2;
+}
+
+#removeButton {
+    color:gray;
+    margin-left: 50px;
+}
 
 
 
