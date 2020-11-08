@@ -277,8 +277,16 @@ p {
     background-color: #474FFF;
     color: white;
     border-style: none;
-    padding: 7px 80px 7px 80px;
+    padding: 7px 92px 7px 92px;
     margin-top: 60px;
+}
+
+#wishlistbutton {
+    background-color: #474FFF;
+    color: white;
+    border-style: none;
+    padding: 7px 80px 7px 80px;
+    margin-top: 20px;
 }
 
 .reviews {

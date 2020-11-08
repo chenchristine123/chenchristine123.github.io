@@ -6,6 +6,7 @@
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src=addtocart.js></script>
+    <script src="wishlist.js"></script>
 </head>
 
 <body>
@@ -34,6 +35,8 @@
         
         <!-- top right icons -->
         <div class="grid-item" >
+            <a href="wishlist.html">
+                <img id="iconsearch" src="images/wishlist.png" alt="wishlist"></a>
             <img id="iconsearch" src="images/search.png" alt="search">
             <img id="iconaccount" src="images/account.png" alt="account">
             <a href="shopping_cart.html">
@@ -85,7 +88,10 @@
             <h5>Quantity</h5>
             <br>
             <input type="number" id="quantity" name="quantity" min="1" value="1">
+            
             <h5><button id="addbutton" onclick="addtocart()">ADD TO CART</button></h5>
+            
+            <h5><button id="wishlistbutton" onclick="addtowishlist()">ADD TO WISHLIST</button></h5>
         </div>
 
         <div class="box6">

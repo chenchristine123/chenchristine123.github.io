@@ -1,42 +1,88 @@
 window.onload = function() {
-    if (localStorage.getItem("itemCount") === null){
-        document.getElementById("itemCount").innerHTML = 0
-    } else {
-        document.getElementById("itemCount").innerHTML = localStorage.itemCount
+    updateItemCount()
+    //localStorage.cart = null
+
+    if (document.getElementById("cart") != null){
+        updateCart();
     }
-    
-    
+    if (document.getElementById("wishlist") != null){
+        updateWishlist();
+    }
 }
 
 
 function addtocart() {
-    console.log("hello");
     
     var size = document.getElementById("size").value; 
-    console.log(size);
     
     var color = document.getElementById("color").value; 
-    console.log(color);
     
     var quantity = parseInt(document.getElementById("quantity").value)
-    console.log(quantity);
-   
-    var itemCount = parseInt(document.getElementById("itemCount").textContent)
-    
-    document.getElementById("itemCount").innerHTML = itemCount + quantity;
-    localStorage.itemCount = itemCount + quantity
-    var index = localStorage.cart.length
-    console.log(index)
-    if (index == 0) {
-        localStorage.setItem("cart", JSON.stringify([[size, color, quantity]]))
+  
+    var cartArray;
+    if (localStorage.getItem("cart")  == "null"){
+        cartArray = [size+","+color+","+quantity]
     } else {
-        var cartArray = JSON.parse(localStorage.getItem("cart"))
-        cartArray.push([size, color, quantity])
+        cartArray = JSON.parse(localStorage.getItem("cart"))
+        cartArray.push(size+","+color+","+quantity)
     }
-    localStorage.cart = [[size, color, quantity]]
-    console.log(localStorage.cart)
     
-    var addedItem = 
+    localStorage.setItem("cart", JSON.stringify(cartArray))
+    updateItemCount()
+    
+}
+
+function updateItemCount(){
+    if (localStorage.getItem("cart")  != "null"){
+        var cartArray = JSON.parse(localStorage.getItem("cart"))
+        var itemCount = 0
+        for (i = 0; i < cartArray.length; i++){
+                var info = cartArray[i].split(",")
+                var quantity = info[2];
+            
+                itemCount += parseInt(quantity);
+            }
+
+        localStorage.itemCount = itemCount;
+        document.getElementById("itemCount").innerHTML = itemCount;
+    }
+}
+
+function updateSubtotal(){
+    if (localStorage.getItem("subtotal")  != "null"){
+        var cartArray = JSON.parse(localStorage.getItem("cart"))
+        var subtotal = 0
+        for (i = 0; i < cartArray.length; i++){
+                var info = cartArray[i].split(",")
+                var quantity = info[2];
+            
+                subtotal += parseInt(quantity)*30;
+            }
+        document.getElementById("subtotal").innerHTML = '$' + subtotal;
+    }
+}
+
+function updateCart(){
+    var index = localStorage.cart.length;
+    if (index > 0) {
+        document.getElementById("cart").innerHTML = "";
+        var cartArray = JSON.parse(localStorage.getItem("cart"))
+        for (i = 0; i < cartArray.length; i++){
+            var info = cartArray[i].split(",")
+            var size = info[0];
+            var color = info[1];
+            var quantity = info[2];
+            var item = itemHTML(i, size, color, quantity);
+            document.getElementById("cart").innerHTML += item;
+        }
+        updateSubtotal()
+    } else{
+        return
+    }
+}
+
+function itemHTML(index, size, color, quantity){
+        var addedItem = 
         '<div class="cartBox" id="cartItem' 
     + index + 
         `" >
@@ -68,9 +114,16 @@ function addtocart() {
             </h5>
         </div>
     `
-    document.getElementById("cart").innerHTML += addedItem;
+    
+    return addedItem;
 }
 
 function removeItem(itemID) {
-    console.log(itemID);
+    var index = parseInt(itemID.substring(8))
+    var cartArray = JSON.parse(localStorage.getItem("cart"))
+    cartArray.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cartArray))
+    updateCart()
+    updateItemCount()
 }
+
