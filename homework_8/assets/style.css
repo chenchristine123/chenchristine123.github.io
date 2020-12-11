@@ -73,6 +73,7 @@ table {
     background-color: #f4f4f4;
     text-align: left;
     padding-left: 20px;
+    align-content: top;
 }
 
 .wave {
